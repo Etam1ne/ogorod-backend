@@ -8,7 +8,7 @@ import { MongoDataServices } from './mongo-data-services.service';
   imports: [
     ConfigModule.forRoot({ envFilePath: 'development.env'}),
     MongooseModule.forFeature([{ name: SoilMoisture.name, schema: SoilMoistureSchema }]),
-    MongooseModule.forRoot(process.env.MONGO_CONNECTION),
+    MongooseModule.forRoot(process.env.MONGO_URI),
   ],
   providers: [
     {
